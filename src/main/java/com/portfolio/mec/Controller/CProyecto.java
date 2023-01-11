@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("https://frontend-portfolio-mec.web.app")
 @RequestMapping("/proyecto")
 public class CProyecto {
 

@@ -71,10 +71,10 @@ public class PersonaController {
     
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona){
-        if(!personaService.existsById(id)){
+        /*if(!personaService.existsById(id)){
             return new ResponseEntity<>(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
-        /*if(personaService.existsByNombre(dtopersona.getNombre()) && personaService.getByNombre(dtopersona.getNombre()).get().getId() != id){
+        if(personaService.existsByNombre(dtopersona.getNombre()) && personaService.getByNombre(dtopersona.getNombre()).get().getId() != id){
             return new ResponseEntity<>(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         if(StringUtils.isBlank(dtopersona.getNombre())){
